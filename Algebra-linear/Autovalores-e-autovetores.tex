@@ -1,0 +1,50 @@
+Seja $A=(a_{ij})\in\mathbb{M}_n(\mathbb{R})$. Dizemos que um valor $\lambda\in\mathbb{R}$ é um autovalor de $A$ se o sistema
+\begin{equation} \label{eq:auto1}
+\begin{pmatrix}a_{11} & \dots & a_{1n}\\ \vdots & \vdots & \vdots\\ a_{n1} & \dots & a_{nn}\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\ \vdots\\ x_n\\ \end{bmatrix}=\lambda\cdot\begin{bmatrix}x_1\\ \vdots\\ x_n\\ \end{bmatrix}
+\end{equation}
+
+tiver uma solução não nula. Para um tal autovalor $\lambda$, cada solução de \eqref{eq:auto1} será chamada de autovetor de $A$ associado a $\lambda$ (ou simplesmente, um autovetor de $A$).
+
+\textbf{Notação}: Se $\lambda$ for um autovalor de uma matriz $A$, indicamos por $V(\lambda)$ ao conjunto de todos os autovetores de $A$ associados a $\lambda$ (isto é, o conjunto solução do sistema \eqref{eq:auto1}).
+
+\textbf{Exemplo}: Considere uma matriz $A=\begin{pmatrix}-1 & 2\\ 2 & -4\\ \end{pmatrix}$
+
+Queremos encontrar um valor $\lambda\in\mathbb{R}$ (se isso for possível) tal que o sistema
+\begin{equation} \label{eq:autoex1}
+\begin{pmatrix}-1 & 2\\ 2 & -4\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\lambda\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}
+\end{equation}
+
+tenha soluções não nulas. Observe que podemos escrever
+$$\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{pmatrix}1 & 0\\0 & 1\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}$$
+
+Daí, a relação \eqref{eq:autoex1} pode ser escrita como
+$$\begin{pmatrix}-1 & 2\\2 & -4\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\lambda\cdot\begin{pmatrix}1 & 0\\0 & 1\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{pmatrix}\lambda & 0\\0 & \lambda\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}$$
+
+Com isso,
+$$\begin{pmatrix}\lambda & 0\\0 & \lambda\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}-\begin{pmatrix}-1 & 2\\2 & -4\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \end{bmatrix}$$
+$$\left[\begin{pmatrix}\lambda & 0\\0 & \lambda\\ \end{pmatrix}-\begin{pmatrix}-1 & 2\\2 & -4\\ \end{pmatrix}\right]\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \end{bmatrix}$$
+\begin{equation} \label{eq:autoex1a}
+\begin{pmatrix}
+\lambda+1 & -2\\-2 & \lambda+4\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \end{bmatrix}
+\end{equation}
+
+Nosso problema se reduz a encontrar um valor $\lambda\in\mathbb{R}$ tal que o sistema \eqref{eq:autoex1a} tenha uma solução não nula. Existe um teorema que diz que um tal sistema homogêneo tem solução não nula se e somente se o determinante de sua matriz de coeficientes for zero. Com isto, existirá um $\lambda$ como queremos se e somente se
+$$0=\det\begin{pmatrix}\lambda+1 & -2\\-2 & \lambda+4\\ \end{pmatrix}=(\lambda+1)\cdot(\lambda+4)-2\cdot2=\lambda(\lambda+5)$$
+
+isto é, quando $\lambda=0$ ou $\lambda=-5$. Esses valores serão os autovalores de $A$. Para cada autovalor deve-se achar os autovetores correspondentes. Substitui-se o respectivo valor de $\lambda$ encontrado em \eqref{eq:autoex1a} e resolve-se os sistemas correspondentes.
+
+Para $\lambda=0$, o sistema \eqref{eq:autoex1a} será:
+$$\begin{pmatrix}1 & -2\\-2 & 4\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \end{bmatrix}$$
+
+ou
+$$\begin{cases}x_1-2x_2=0\\-2x_1+4x_2=0\\ \end{cases}$$
+
+Como a 2ª equação é a 1ª multiplicada por -2, a solução do sistema é a resolução da 1ª equação. Não é difícil ver que o conjunto solução desse sistema é $\{(2a,\;a):a\in\mathbb{R}\}$.
+
+Para $\lambda=-5$, o sistema \eqref{eq:autoex1a} será:
+$$\begin{pmatrix}-4 & -2\\-2 & -1\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \end{bmatrix}$$
+
+ou
+$$\begin{cases}-4x_1-2x_2=0\\-2x_1-x_2=0\\ \end{cases}$$
+
+que tem conjunto solução igual a $\{(a,\;-2a):a\in\mathbb{R}\}$.

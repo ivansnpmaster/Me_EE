@@ -1,0 +1,54 @@
+Um autovalor real de uma matriz $A=(a_{ij})\in\mathbb{M}_n(\mathbb{R})$, $n\geqslant1$, é um valor $\lambda\in\mathbb{R}$ tal que o sistema
+\begin{equation} \label{eq:polcar1}
+\begin{pmatrix}a_{11} & \dots & a_{1n}\\ \vdots & \vdots & \vdots\\a_{n1} & \dots & a_{nn}\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\ \vdots \\ x_n\\ \end{bmatrix}=\lambda\cdot\begin{bmatrix}x_1\\ \vdots \\ x_n\\ \end{bmatrix}
+\end{equation}
+
+tenha uma solução não nula. Inicialmente, observe que
+$$\lambda\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}=\lambda\cdot\begin{pmatrix}1 & 0 & \dots & 0\\0 & 1 & \dots & 0\\ \vdots & \vdots & & \vdots\\0 & 0 & \dots & 1\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}=\begin{pmatrix}\lambda & 0 & \dots & 0\\0 & \lambda & \dots & 0\\ \vdots & \vdots & & \vdots\\0 & 0 & \dots & \lambda \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}$$
+
+Com isso, tem-se que \eqref{eq:polcar1} é equivalente a
+$$
+\begin{pmatrix}\lambda & 0 & \dots & 0\\0 & \lambda & \dots & 0\\ \vdots & \vdots & & \vdots\\0 & 0 & \dots & \lambda \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}-\begin{pmatrix}a_{11} & a_{12} & \dots & a_{1n}\\a_{21} & a_{22} & \dots & a_{2n}\\ \vdots & \vdots & & \vdots\\a_{n1} & a_{n2} & \dots & a_{nn}\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \vdots\\0\\ \end{bmatrix}$$
+
+ou
+\begin{equation} \label{eq:polcar2}
+\begin{pmatrix}\lambda-a_{11} & -a_{12} & \dots & -a_{1n}\\-a_{21} & \lambda-a_{22} & \dots & -a_{2n}\\ \vdots & \vdots & & \vdots\\-a_{n1} & -a_{n2} & \dots & \lambda-a_{nn}\\ \end{pmatrix}\cdot\begin{bmatrix}x_1\\x_2\\ \vdots\\x_n\\ \end{bmatrix}=\begin{bmatrix}0\\0\\ \vdots\\0\\ \end{bmatrix}
+\end{equation}
+
+A matriz de coeficientes do sistema \eqref{eq:polcar2} pode então ser escrita como $(\lambda\cdot I-A)$ que obviamente pertence a $\mathbb{M}_n(\mathbb{R})$. O sistema \eqref{eq:polcar2} terá uma solução não nula se e somente se $\det(\lambda\cdot I-A)=0$.
+
+O polinômio característico de uma matriz $A\in\mathbb{M}_n(\mathbb{R})$ é o polinômio $p_a(t)=\det(t\cdot I-A)$.
+
+O problema de encontrar os autovalores de uma matriz $A$ transforma-se em achar as possíveis raízes do polinômio $p_a(t)$. Como sabe-se que um polinômio de grau $n$ possui no máximo $n$ raízes distintas, conclui-se que uma matriz $A\in\mathbb{M}_n(\mathbb{R})$ possui no máximo $n$ autovalores distintos. Uma vez encontradas as raízes de $p_a(t)$, o cálculo dos autovetores associados a elas se reduz à solução de sistemas lineares.
+
+\textbf{Exemplo:} Calcule os autovalores e os autovetores da matriz:
+$$A=\begin{pmatrix}-1 & 3 & 0\\-3 & 5 & 0\\1 & 1 & 2\\ \end{pmatrix}$$
+
+Primeiramente, seu polinômio característico:
+$$p_a(t)=\det\begin{pmatrix}t+1 & -3 & 0\\3 & t-5 & 0\\-1 & -1 & t-2\\ \end{pmatrix}=(t+1)\cdot(t-5)\cdot(t-2)-[-9\cdot(t-2)]=$$
+$$=(t-2)\cdot[(t+1)\cdot(t-5)+9]=(t-2)\cdot(t^2-5t+t-5+9)=$$
+$$(t-2)\cdot(t^2-4t+4)=(t-2)\cdot{(t-2)}^2={(t-2)}^3$$
+
+Logo, o único autovalor da matriz $A$ é 2 (pois 2 é a raíz tripla de $p_a(t)$). Agora, calcula-se os autovetores associados a 2, isto é, a solução do sistema:
+$$\begin{pmatrix}3 & -3 & 0\\3 & -3 & 0\\-1 & -1 & 0\\ \end{pmatrix}\cdot\begin{bmatrix}x\\y\\z\\ \end{bmatrix}=\begin{bmatrix}0\\0\\0\\ \end{bmatrix}$$
+
+ou
+$$\begin{cases}3x-3y=0\\3x-3y=0\\-x-y=0\\ \end{cases}$$
+
+Escalonando o sistema, tem-se:
+$$\begin{cases}3x-3y=0\\-6y=0\\ \end{cases}$$
+
+O que implica em $x=y=0$.
+
+Observa-se que qualquer valor de $z\in\mathbb{R}$ induz uma solução do sistema do tipo $(0,\;0,\;z)=z(0,\;0,\;1)$. Logo, os autovetores associados a 2 são os múltiplos de $(0,\;0,\;1)$.
+
+\textbf{Exemplo:} Considere uma matriz quase idêntica à do exemplo anterior (a diferença está no valor $a_{31}$).
+$$A=\begin{pmatrix}-1 & 3 & 0\\-3 & 5 & 0\\-1 & 1 & 2\\ \end{pmatrix}$$
+
+Seu polinômio característico é (também) $p_a(t)={(t-2)}^3$. Já que na multiplicação nas diagonais onde está o $a_{31}$ existe o número zero. Logo, 2 é o único autovalor de $A$. Para o cálculo dos autovetores, tem-se:
+$$\begin{pmatrix}3 & -3 & 0\\3 & -3 & 0\\1 & -1 & 0\\ \end{pmatrix}\cdot\begin{bmatrix}x\\y\\z\\ \end{bmatrix}=\begin{bmatrix}0\\0\\0\\ \end{bmatrix}$$
+
+ou
+$$\begin{cases}3x-3y=0\\3x-3y=0\\x-y=0\\ \end{cases}$$
+
+É fácil ver que o conjunto solução do sistema será o conjunto solução da equação $x-y=0$, o que implica que $x=y$. De novo, o valor de $z$ pode ser qualquer e portanto, tem-se que os autovetores de $A$ são vetores do tipo $(x,\;x,\;z)=x(1,\;1,\;0)+z(0,\;0,\;1)$, com $x, z\in\mathbb{R}$.
