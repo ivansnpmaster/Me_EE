@@ -1,0 +1,39 @@
+\begin{enumerate}
+	\item Calcular $\displaystyle\frac{dy}{dx}$ para $x^2+y^2=25$
+		$$\frac{d}{dx}(x^2+y^2)=\frac{d}{dx}25$$
+		$$2x+2y\frac{dy}{dx}=0$$
+		$$\frac{dy}{dx}=-\frac{x}{y}$$
+	\item Encontre uma equação da tangente ao círculo $x^2+y^2=25$ no ponto (3, 4)
+		
+		No ponto (3, 4), tem-se $x=3$ e $y=4$:
+		$$\frac{dy}{dx}=-\frac{3}{4}$$
+		$$y-y_0=m(x-x_0)$$
+		$$y-4=-\frac{3}{4}(x-3)$$
+		Ou $$3x+4y=25$$
+	\item Calcular $y'$ para $x^3+y^3=6xy$ (Fólio de Descartes)
+		$$x^3+y^3=6xy$$
+		$$3x^2+3y^2y'=6(xy'+y\cdot1)$$
+		$$x^2+y^2y'=2xy'+2y$$
+		$$y^2y'-2xy'=2y-x^2$$
+		$$y'(y^2-2x)=2y-x^2$$
+		$$y'=\frac{2y-x^2}{y^2-2x}$$
+	\item Calcular $y'$ para $\sin(y+x)=y^2\cos x$
+		$$\sin(y+x)=y^2\cos x$$
+		$$\cos(y+x)(y'+1)=y^2(-\sin x)+\cos x\cdot2yy'$$
+		Agrupando termos semelhantes
+		$$\cos(y+x)+y^2\sin x=\cos x\cdot(2yy')-\cos(y+x)y'$$
+		$$\cos(y+x)+y^2\sin x=y'(\cos x\cdot2y-\cos(y+x))$$
+		$$y'=\frac{\cos(y+x)+y^2\sin x}{\cos x\cdot2y-\cos(y+x)}$$
+	\item Calcular $y''$ para $x^4+y^4=16$
+		$$x^4+y^4=16$$
+		$$4x^3+4y^3y'=0$$
+		$$y'=-\frac{4x^3}{4y^3}=-\frac{x^3}{y^3}$$
+		Derivando $y'$ pela Regra do Quociente:
+		$$y''=\frac{d}{dx}\left(-\frac{x^3}{y^3}\right)=-\left(\frac{y^3\cdot3x^2-x^3\cdot3y^2y'}{(y^3)^2}\right)$$
+		Substituindo $y'$ na equação acima:
+		$$-\left(\frac{y^3\cdot3x^2-x^3\cdot3y^2\left[-\displaystyle\frac{x^3}{y^3}\right]}{y^6}\right)$$
+		$$-\frac{3(x^2y^4+x^6)}{y^7}=-\frac{3x^2(y^4+x^4)}{y^7}$$
+		
+		Podendo ainda ser simplificada, pois $x^4+y^4=16$
+		$$-\frac{3x^2(16)}{y^7}=-\frac{48x^2}{y^7}$$
+\end{enumerate}

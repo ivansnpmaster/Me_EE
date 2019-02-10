@@ -1,0 +1,9 @@
+Existem três casos possíveis de indeterminação em limites de funcões potência, do tipo $$\lim_{x \rightarrow a} [f(x)]^{g(x)}$$
+
+\begin{enumerate}
+	\item $f(x) \rightarrow 0$ e $g(x) \rightarrow 0$, caso $0^0$
+	\item $f(x) \rightarrow \infty$ e $g(x) \rightarrow 0$, caso $\infty^0$
+	\item $f(x) \rightarrow 1$ e $g(x) \rightarrow \infty$, caso $1^\infty$
+\end{enumerate}
+
+Sua resolução pode ser feita de duas formas. Pode-se tomar o logarítmo natural em ambos os lados de $y=[f(x)]^{g(x)}$, deixando a função na forma $\ln y = g(x) \cdot \ln f(x)$. Isso causa uma mudança no limite, deixado-o na forma indeterminada do tipo $0 \cdot \infty$. A partir daí, pode-se deixar a função como um quociente (produto indeterminado) para posterior aplicação da Regra de l'Hôspital ou podemos reescrever a função $[f(x)]^{g(x)}$ como $e^{g(x)\cdot \ln f(x)}$, já que $x=e^{\ln x}$ e calculamos o limite dessa nova função, sendo: $$\lim_{x \rightarrow a}[f(x)]^{g(x)} = \lim_{x \rightarrow a} e^{g(x) \cdot \ln f(x)} = e^{\lim_{x \rightarrow a} g(x) \cdot \ln f(x)}$$
