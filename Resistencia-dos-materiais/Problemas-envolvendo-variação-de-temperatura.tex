@@ -27,3 +27,20 @@ Agora, um caso específico. Considerando uma barra $AB$ de comprimento $L$, colo
     	\includegraphics[width=0.5\textwidth]{Resistencia-dos-materiais/Imagens/Variacao-de-temperatura-sem-deformacao.jpg}
 	\end{center}
 \end{figure}
+
+Na tentativa de se calcular a tensão $\sigma$ criada pela variação de temperatura, verifica-se que o problema é estaticamente indeterminado. É necessário calcular a força $P$, levando em conta as condições de alongamento nulo da barra. Utilizando o método da superposição, retira-se o anteparo $B$ que restringe a deformação da barra. Ela então se alonga livremente com variação de temperatura $\Delta T$. Sabe-se que pela Equação~\eqref{eq:def-total}, o alongamento correspondente é:
+$$\delta_T=\alpha(\Delta T)L$$
+
+Aplicando-se na extremidade $B$ da barra a força $P$ que representa a reação superabundante e, utilizando a Equação~\eqref{eq:def-elastica}:
+$$\delta_P=\frac{PL}{AE}$$
+
+Como a deformação total deve ser nula, tem-se:
+$$\delta=\delta_T+\delta_P=\alpha(\Delta T)L+\frac{PL}{AE}=0$$
+$$\alpha(\Delta T)+\frac{P}{AE}=0$$
+$$\frac{AE\alpha(\Delta T)+P}{AE}=0$$
+$$P=-AE\alpha(\Delta T)$$
+
+Portanto, a tensão atuante na barra devido à variação de temperatura $\Delta T$ é:
+$$\sigma=\frac{P}{A}=-E\alpha(\Delta T)$$
+
+Esse caso e a observação anterior sobre ausência de deformações específicas \textit{se aplicam no caso de barra se seção transversal uniforme e material homogêneo}. Qualquer outro problema envolvendo variações de temperatura em estruturas impedidas de se deformarem deve ser analisado dentro de suas características. De qualquer modo, pode-se smepre considerar separadamente as deformações provocadas pela variação de temperatura e pelas reações superabundantes e superpor os resultados.
