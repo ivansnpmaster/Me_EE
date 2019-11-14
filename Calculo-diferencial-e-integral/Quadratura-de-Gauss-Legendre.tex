@@ -1,0 +1,19 @@
+É uma forma de integração numérica. Evalua-se uma área sob uma linha reta pela junção de \textbf{quaisquer} dois pontos numa curva ao invés de simplesmente escolher pontos finais. A chave é escolher uma linha que \textbf{balanceia} os erros positivos e negativos.
+$$I\approx c_0 f(x_0)+c_1 f(x_1)+\dots + c_{n} f(x_{n})$$
+
+Ou,
+
+$$I\approx \sum c_i f(x_i)$$
+
+Onde $c_i$ (pesos) e $x_i$ devem ser determinados.
+
+Para a Quadratura de Gauss-Legendre de dois pontos, tem-se:
+
+$$I\approx c_0 f(x_0)+c_1 f(x_1)$$
+
+Considerações:
+\begin{itemize}
+	\item São necessárias quatro equações para determinar $c_0$, $c_1$, $x_0$ e $x_1$;
+	\item Assume-se que as integrais de $y=c$, $y=x$, $y=x^2$ e $y=x^3$ são computadas \textbf{exatamente} pela integral acima;
+	\item Simplifica-se assumindo uma integração no intervalo $[-1, 1]$, i.e., move-se o intervalo de integração $[a,b]$ para $[-1, 1]$.
+\end{itemize}
